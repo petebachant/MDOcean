@@ -1,0 +1,13 @@
+﻿inputs
+======
+
+.. automodule:: inputs
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+
+   inputs.validation
+   inputs.wave_conditions

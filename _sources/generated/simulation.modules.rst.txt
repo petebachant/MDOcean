@@ -1,0 +1,15 @@
+simulation.modules
+==================
+
+.. automodule:: simulation.modules
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+
+   simulation.modules.dynamics
+   simulation.modules.econ
+   simulation.modules.hydro
+   simulation.modules.structures

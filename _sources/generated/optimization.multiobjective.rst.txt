@@ -1,0 +1,6 @@
+optimization.multiobjective
+===========================
+
+.. automodule:: optimization.multiobjective
+
+   

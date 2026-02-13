@@ -1,0 +1,13 @@
+﻿optimization
+============
+
+.. automodule:: optimization
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+
+   optimization.sensitivities
+   optimization.multiobjective

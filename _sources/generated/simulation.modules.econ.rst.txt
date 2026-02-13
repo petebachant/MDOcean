@@ -1,0 +1,6 @@
+simulation.modules.econ
+=======================
+
+.. automodule:: simulation.modules.econ
+
+   
