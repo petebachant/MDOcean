@@ -1,0 +1,64 @@
+2026-05-11 13:30:37,468 - INFO - Running stage 'OpenFLASH':
+2026-05-11 13:30:37,468 - INFO - > calkit dvc repro
+2026-05-11 13:30:41,511 - INFO - Stage 'mermaid-make-pdfs@taxonomy' didn't change, skipping
+2026-05-11 13:30:41,514 - INFO - Stage 'mermaid-make-pdfs@mod_freq_domain_ctrl_synthesis' didn't change, skipping
+2026-05-11 13:30:41,517 - INFO - Stage 'mermaid-make-pdfs@mod_freq_domain_ctrl_evaluation' didn't change, skipping
+2026-05-11 13:30:41,520 - INFO - Stage 'mermaid-make-pngs@taxonomy' didn't change, skipping
+2026-05-11 13:30:41,524 - INFO - Stage 'mermaid-make-pngs@mod_freq_domain_ctrl_synthesis' didn't change, skipping
+2026-05-11 13:30:41,528 - INFO - Stage 'mermaid-make-pngs@mod_freq_domain_ctrl_evaluation' didn't change, skipping
+2026-05-11 13:30:41,531 - INFO - Stage 'make-drag-integral' didn't change, skipping
+2026-05-11 13:30:41,535 - INFO - Stage 'make-var-bounds' didn't change, skipping
+2026-05-11 13:30:41,559 - INFO - Stage 'make-calkit-stages' didn't change, skipping
+2026-05-11 13:30:41,580 - INFO - Stage 'analysis-AllFigCompare' didn't change, skipping
+2026-05-11 13:30:41,609 - INFO - Stage 'postpro-AllFigCompare' didn't change, skipping
+2026-05-11 13:30:41,632 - INFO - Stage 'analysis-Comparison' didn't change, skipping
+2026-05-11 13:30:41,663 - INFO - Stage 'postpro-Comparison' didn't change, skipping
+2026-05-11 13:30:41,684 - INFO - Stage 'analysis-Constraints' didn't change, skipping
+2026-05-11 13:30:41,708 - INFO - Stage 'postpro-Constraints' didn't change, skipping
+2026-05-11 13:30:41,731 - INFO - Stage 'analysis-Cost' didn't change, skipping
+2026-05-11 13:30:41,754 - INFO - Stage 'postpro-Cost' didn't change, skipping
+2026-05-11 13:30:41,781 - INFO - Stage 'analysis-DampingPlateStructures' didn't change, skipping
+2026-05-11 13:30:41,809 - INFO - Stage 'postpro-DampingPlateStructures' didn't change, skipping
+2026-05-11 13:30:41,833 - INFO - Stage 'analysis-DescFcns' didn't change, skipping
+2026-05-11 13:30:41,862 - INFO - Stage 'postpro-DescFcns' didn't change, skipping
+2026-05-11 13:30:41,884 - INFO - Stage 'analysis-DesignSpaceExploration' didn't change, skipping
+2026-05-11 13:30:41,911 - INFO - Stage 'postpro-DesignSpaceExploration' didn't change, skipping
+2026-05-11 13:30:41,932 - INFO - Stage 'analysis-DesignVars' didn't change, skipping
+2026-05-11 13:30:41,958 - INFO - Stage 'postpro-DesignVars' didn't change, skipping
+2026-05-11 13:30:41,978 - INFO - Stage 'analysis-DragIntegral' didn't change, skipping
+2026-05-11 13:30:42,006 - INFO - Stage 'postpro-DragIntegral' didn't change, skipping
+2026-05-11 13:30:42,036 - INFO - Stage 'analysis-FitOlaya' didn't change, skipping
+2026-05-11 13:30:42,416 - INFO - Running stage 'postpro-FitOlaya':
+2026-05-11 13:30:42,417 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=FitOlaya; obj.run_all_from_load();"
+2026-05-11 13:31:29,005 - INFO - Running stage 'analysis-ForceSaturationFigFunc':
+2026-05-11 13:31:29,006 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=ForceSaturationFigFunc; obj.run_analysis();"
+2026-05-11 13:41:32,095 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 13:41:33,248 - INFO - Running stage 'postpro-ForceSaturationFigFunc':
+2026-05-11 13:41:33,248 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=ForceSaturationFigFunc; obj.run_all_from_load();"
+2026-05-11 13:41:58,456 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 13:42:00,169 - INFO - Running stage 'analysis-GradientOptimFigFunc':
+2026-05-11 13:42:00,170 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=GradientOptimFigFunc; obj.run_analysis();"
+2026-05-11 13:50:01,778 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 13:50:02,976 - INFO - Running stage 'postpro-GradientOptimFigFunc':
+2026-05-11 13:50:02,976 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=GradientOptimFigFunc; obj.run_all_from_load();"
+2026-05-11 13:51:06,607 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 13:51:07,807 - INFO - Running stage 'analysis-HydroCoeffFigFunc':
+2026-05-11 13:51:07,807 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=HydroCoeffFigFunc; obj.run_analysis();"
+2026-05-11 13:51:34,855 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 13:51:36,028 - INFO - Running stage 'postpro-HydroCoeffFigFunc':
+2026-05-11 13:51:36,028 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=HydroCoeffFigFunc; obj.run_all_from_load();"
+2026-05-11 13:51:59,998 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 13:52:01,158 - INFO - Running stage 'analysis-LocationSensitivity':
+2026-05-11 13:52:01,158 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=LocationSensitivity; obj.run_analysis();"
+2026-05-11 14:08:41,577 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 14:08:42,738 - INFO - Running stage 'postpro-LocationSensitivity':
+2026-05-11 14:08:42,738 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=LocationSensitivity; obj.run_all_from_load();"
+2026-05-11 14:09:55,906 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 14:09:57,136 - INFO - Running stage 'analysis-Meem':
+2026-05-11 14:09:57,136 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=Meem; obj.run_analysis();"
+2026-05-11 14:11:15,207 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 14:11:16,432 - INFO - Running stage 'postpro-Meem':
+2026-05-11 14:11:16,432 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=Meem; obj.run_all_from_load();"
+2026-05-11 14:11:52,116 - INFO - Updating lock file 'dvc.lock'
+2026-05-11 14:11:53,349 - INFO - Running stage 'analysis-Multistart':
+2026-05-11 14:11:53,349 - INFO - > matlab -noFigureWindows -batch "add_mdocean_path(); obj=Multistart; obj.run_analysis();"

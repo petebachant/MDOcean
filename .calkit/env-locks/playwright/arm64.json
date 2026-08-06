@@ -1,0 +1,23 @@
+{
+    "RepoTags": [
+        "playwright"
+    ],
+    "RepoDigests": [
+        "playwright@sha256:2c9695d764c10b7502f7cf0ce5c987b5a3b56aaf4fa9bb586b1da7a24edf3034"
+    ],
+    "Architecture": "arm64",
+    "Os": "linux",
+    "RootFS": {
+        "Type": "layers",
+        "Layers": [
+            "sha256:c01c35a040a25a51cd473910e3212a46d85fb700a6467c687f231d7edd47cbc1",
+            "sha256:479c01ffe817bb89aeed839642503ade7a75811cf6e5c5ef1df0b1a119ce0d65",
+            "sha256:51bbf5bd9497a2c1da40c0198c7a67fffadaaa1aa84140467ccdfb4d72c30799",
+            "sha256:fadfc9a65b5890ff7cc1d3f7fcc43477b476078864f1ff58cfb1b788906e24de",
+            "sha256:1e92cccc51bedeab4df8071e2e204aa17aac6d85a0438c79f16af7cbb1924cc9",
+            "sha256:6f5533119948fc0f18129ee75cf27a26ea026e443caeb615109f9f1cce9b8f3b"
+        ]
+    },
+    "DockerfileMD5": "a236924fa3114c6a505a0de0772df51d",
+    "DepsMD5s": {}
+}
