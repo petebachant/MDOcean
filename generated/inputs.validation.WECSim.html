@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>inputs.validation.WECSim &mdash; MDOcean v1.0.2 documentation</title>
+  <title>inputs.validation.WECSim &mdash; MDOcean v1.4.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -15,7 +15,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=e562d664"></script>
+      <script src="../_static/documentation_options.js?v=96b7ed95"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -42,6 +42,7 @@
           
           <a href="../index.html" class="icon icon-home">
             MDOcean
+              <img src="../_static/SEALab_Logo_Light_202101_120ht.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -55,6 +56,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modification.html">Modification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videos.html">Videos</a></li>
 </ul>
 
         </div>
@@ -87,53 +89,6 @@
   <section id="inputs-validation-wecsim">
 <h1>inputs.validation.WECSim<a class="headerlink" href="#inputs-validation-wecsim" title="Link to this heading"></a></h1>
 <dl class="mat function" id="module-inputs.validation.WECSim">
-<dt class="sig sig-object mat" id="inputs.validation.WECSim.readWAMIT">
-<span class="sig-prename descclassname"><span class="pre">inputs.validation.WECSim.</span></span><span class="sig-name descname"><span class="pre">readWAMIT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">hydro</span></em>, <em class="sig-param"><span class="pre">filename</span></em>, <em class="sig-param"><span class="pre">exCoeff</span></em><span class="sig-paren">)</span><a class="headerlink" href="#inputs.validation.WECSim.readWAMIT" title="Link to this definition"></a></dt>
-<dd><p>Function <a class="reference internal" href="#inputs.validation.WECSim.readWAMIT" title="inputs.validation.WECSim.readWAMIT"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">readWAMIT()</span></code></a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>hydro</strong> – function from WECSim</p></li>
-<li><p><strong>filename</strong> – filename</p></li>
-<li><p><strong>exCoeff</strong> – exCoeff</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>function from WECSim</p>
-</dd>
-</dl>
-<p>Reads data from a WAMIT output file.</p>
-<p>If generalized body modes are used, the output directory must also 
-include the <cite>*.cfg</cite>, <cite>*.mmx</cite>, and <cite>*.hst</cite> files.
-If simu.nonlinearHydro = 3 will be used, the output directory must also
-include the <cite>*.3fk</cite> and <cite>*.3sc</cite> files.</p>
-<p>See <code class="docutils literal notranslate"><span class="pre">WEC-Sim/examples/BEMIO/WAMIT</span></code> for examples of usage.</p>
-<section id="parameters">
-<h2><code class="xref mat mat-class docutils literal notranslate"><span class="pre">Parameters</span></code><a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
-<blockquote>
-<div><dl class="simple">
-<dt>hydro<span class="classifier">struct</span></dt><dd><p>Structure of hydro data that WAMIT input data will be appended to</p>
-</dd>
-<dt>filename<span class="classifier">string</span></dt><dd><p>Path to the WAMIT output file</p>
-</dd>
-<dt>exCoeff<span class="classifier">integer</span></dt><dd><p>Flag indicating the type of excitation force coefficients to
-read, ‘diffraction’ (default), ‘haskind’, or ‘rao’</p>
-</dd>
-</dl>
-</div></blockquote>
-</section>
-<section id="returns">
-<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
-<blockquote>
-<div><dl class="simple">
-<dt>hydro<span class="classifier">struct</span></dt><dd><p>Structure of hydro data with WAMIT data appended</p>
-</dd>
-</dl>
-</div></blockquote>
-</section>
-</dd></dl>
-
-<dl class="mat function">
 <dt class="sig sig-object mat" id="inputs.validation.WECSim.myWecSimFcn">
 <span class="sig-prename descclassname"><span class="pre">inputs.validation.WECSim.</span></span><span class="sig-name descname"><span class="pre">myWecSimFcn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">imcr</span></em>, <em class="sig-param"><span class="pre">mcr</span></em>, <em class="sig-param"><span class="pre">pctDir</span></em>, <em class="sig-param"><span class="pre">totalNumOfWorkers</span></em>, <em class="sig-param"><span class="pre">X</span></em>, <em class="sig-param"><span class="pre">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#inputs.validation.WECSim.myWecSimFcn" title="Link to this definition"></a></dt>
 <dd><p>Function wecSimFcn</p>
@@ -154,6 +109,24 @@ read, ‘diffraction’ (default), ‘haskind’, or ‘rao’</p>
 </dl>
 <p>wecSimFcn
 WEC-Sim from function executable+</p>
+</dd></dl>
+
+<dl class="mat script">
+<dt class="sig sig-object mat" id="inputs.validation.WECSim.runRM3Parallel">
+<span class="sig-prename descclassname"><span class="pre">inputs.validation.WECSim.</span></span><span class="sig-name descname"><span class="pre">runRM3Parallel</span></span><a class="headerlink" href="#inputs.validation.WECSim.runRM3Parallel" title="Link to this definition"></a></dt>
+<dd><p>Copyright 2014 National Renewable Energy Laboratory and National
+Technology &amp; Engineering Solutions of Sandia, LLC (NTESS).
+Under the terms of Contract DE-NA0003525 with NTESS,
+the U.S. Government retains certain rights in this software.</p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
 </dd></dl>
 
 <dl class="mat function">
@@ -177,8 +150,8 @@ data according to ascending frequency.</p>
 <p>This function is not called directly by the user; it is automatically
 implemented within the <a class="reference internal" href="#inputs.validation.WECSim.readWAMIT" title="inputs.validation.WECSim.readWAMIT"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">readWAMIT()</span></code></a>, readCAPYTAINE, readNEMOH, and readAQWA
 functions.</p>
-<section id="id1">
-<h2><code class="xref mat mat-class docutils literal notranslate"><span class="pre">Parameters</span></code><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="parameters">
+<h2><code class="xref mat mat-class docutils literal notranslate"><span class="pre">Parameters</span></code><a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt>hydro<span class="classifier">[1 x 1] struct</span></dt><dd><p>Structure of hydro data that will be  normalized and sorted
@@ -187,8 +160,8 @@ depending on the value of hydro.code</p>
 </dl>
 </div></blockquote>
 </section>
-<section id="id2">
-<h2>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt>hydro<span class="classifier">[1 x 1] struct</span></dt><dd><p>Normalized hydro data</p>
@@ -198,22 +171,62 @@ depending on the value of hydro.code</p>
 </section>
 </dd></dl>
 
-<dl class="mat script">
-<dt class="sig sig-object mat" id="inputs.validation.WECSim.runRM3Parallel">
-<span class="sig-prename descclassname"><span class="pre">inputs.validation.WECSim.</span></span><span class="sig-name descname"><span class="pre">runRM3Parallel</span></span><a class="headerlink" href="#inputs.validation.WECSim.runRM3Parallel" title="Link to this definition"></a></dt>
-<dd><p>Copyright 2014 National Renewable Energy Laboratory and National
-Technology &amp; Engineering Solutions of Sandia, LLC (NTESS).
-Under the terms of Contract DE-NA0003525 with NTESS,
-the U.S. Government retains certain rights in this software.</p>
-<p>Licensed under the Apache License, Version 2.0 (the “License”);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-<p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p>
+<dl class="mat function">
+<dt class="sig sig-object mat" id="inputs.validation.WECSim.readWAMIT">
+<span class="sig-prename descclassname"><span class="pre">inputs.validation.WECSim.</span></span><span class="sig-name descname"><span class="pre">readWAMIT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">hydro</span></em>, <em class="sig-param"><span class="pre">filename</span></em>, <em class="sig-param"><span class="pre">exCoeff</span></em><span class="sig-paren">)</span><a class="headerlink" href="#inputs.validation.WECSim.readWAMIT" title="Link to this definition"></a></dt>
+<dd><p>Function <a class="reference internal" href="#inputs.validation.WECSim.readWAMIT" title="inputs.validation.WECSim.readWAMIT"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">readWAMIT()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hydro</strong> – function from WECSim</p></li>
+<li><p><strong>filename</strong> – filename</p></li>
+<li><p><strong>exCoeff</strong> – exCoeff</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>function from WECSim</p>
+</dd>
+</dl>
+<p>Reads data from a WAMIT output file.</p>
+<p>If generalized body modes are used, the output directory must also 
+include the <cite>*.cfg</cite>, <cite>*.mmx</cite>, and <cite>*.hst</cite> files.
+If simu.nonlinearHydro = 3 will be used, the output directory must also
+include the <cite>*.3fk</cite> and <cite>*.3sc</cite> files.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">WEC-Sim/examples/BEMIO/WAMIT</span></code> for examples of usage.</p>
+<section id="id1">
+<h2><code class="xref mat mat-class docutils literal notranslate"><span class="pre">Parameters</span></code><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>hydro<span class="classifier">struct</span></dt><dd><p>Structure of hydro data that WAMIT input data will be appended to</p>
+</dd>
+<dt>filename<span class="classifier">string</span></dt><dd><p>Path to the WAMIT output file</p>
+</dd>
+<dt>exCoeff<span class="classifier">integer</span></dt><dd><p>Flag indicating the type of excitation force coefficients to
+read, ‘diffraction’ (default), ‘haskind’, or ‘rao’</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>hydro<span class="classifier">struct</span></dt><dd><p>Structure of hydro data with WAMIT data appended</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="inputs.validation.WECSim.wecsim_var_names">
+<span class="sig-prename descclassname"><span class="pre">inputs.validation.WECSim.</span></span><span class="sig-name descname"><span class="pre">wecsim_var_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inputs.validation.WECSim.wecsim_var_names" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="inputs.validation.WECSim.add_wecsim_path">
+<span class="sig-prename descclassname"><span class="pre">inputs.validation.WECSim.</span></span><span class="sig-name descname"><span class="pre">add_wecsim_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inputs.validation.WECSim.add_wecsim_path" title="Link to this definition"></a></dt>
+<dd><p>ADD_WECSIM_PATH Add WEC-Sim to the MATLAB path, including applying the Simulink glibc patch.</p>
 </dd></dl>
 
 </section>

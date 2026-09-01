@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>plots.util &mdash; MDOcean v1.0.2 documentation</title>
+  <title>plots.util &mdash; MDOcean v1.4.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -15,7 +15,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=e562d664"></script>
+      <script src="../_static/documentation_options.js?v=96b7ed95"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -40,6 +40,7 @@
           
           <a href="../index.html" class="icon icon-home">
             MDOcean
+              <img src="../_static/SEALab_Logo_Light_202101_120ht.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -53,6 +54,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modification.html">Modification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videos.html">Videos</a></li>
 </ul>
 
         </div>
@@ -83,59 +85,31 @@
              
   <section id="plots-util">
 <h1>plots.util<a class="headerlink" href="#plots-util" title="Link to this heading"></a></h1>
-<dl class="mat script" id="module-plots.util">
-<dt class="sig sig-object mat" id="plots.util.hatchfill2_demo">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">hatchfill2_demo</span></span><a class="headerlink" href="#plots.util.hatchfill2_demo" title="Link to this definition"></a></dt>
-<dd><p>HATCHFILL2_DEMO   Demonstration script for HATCHFILL2 function
-4 examples from original HATCHFILL by Neil Tandon
-a bar plot example</p>
+<dl class="mat function" id="module-plots.util">
+<dt class="sig sig-object mat" id="plots.util.improvePlot">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">improvePlot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.improvePlot" title="Link to this definition"></a></dt>
+<dd><p>Function <a class="reference internal" href="#plots.util.improvePlot" title="plots.util.improvePlot"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">improvePlot()</span></code></a></p>
+<p>Plot <code class="xref mat mat-func docutils literal notranslate"><span class="pre">parameters()</span></code>
+MATLAB treats mac and PC displays differently which can create
+weird looking graphs. Here we handle system differences</p>
 </dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="plots.util.save_fig_with_diagnostic">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">save_fig_with_diagnostic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">fig</span></em>, <em class="sig-param"><span class="pre">fig_name</span></em>, <em class="sig-param"><span class="pre">pdf_prefix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.save_fig_with_diagnostic" title="Link to this definition"></a></dt>
-<dd><p>Function <a class="reference internal" href="#plots.util.save_fig_with_diagnostic" title="plots.util.save_fig_with_diagnostic"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">save_fig_with_diagnostic()</span></code></a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>fig</strong> – Figure handle</p></li>
-<li><p><strong>fig_name</strong> – fig_name</p></li>
-<li><p><strong>pdf_prefix</strong> – pdf_prefix</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>diagnostic</p>
-</dd>
-</dl>
-<p>saves a pdf of a figure, robustly handling cases of gobjects, deleted
-handles, and invalid figures</p>
+<dt class="sig sig-object mat" id="plots.util.contourx">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">contourx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">X</span></em>, <em class="sig-param"><span class="pre">Y</span></em>, <em class="sig-param"><span class="pre">Z</span></em>, <em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.contourx" title="Link to this definition"></a></dt>
+<dd><p>wrapper around contourf that avoids “contour not rendered for constant
+zdata” warning by using imagesc when Z is constant</p>
 </dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="plots.util.bluewhitered">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">bluewhitered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">m</span></em>, <em class="sig-param"><span class="pre">white_number</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.bluewhitered" title="Link to this definition"></a></dt>
-<dd><p>Function <a class="reference internal" href="#plots.util.bluewhitered" title="plots.util.bluewhitered"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">bluewhitered()</span></code></a></p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">param m<span class="colon">:</span></dt>
-<dd class="field-odd"><p>m</p>
-</dd>
-<dt class="field-even">param white_number<span class="colon">:</span></dt>
-<dd class="field-even"><p>white_number</p>
-</dd>
-<dt class="field-odd">returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>newmap</p>
-</dd>
-</dl>
-</div></blockquote>
-<dl class="simple">
-<dt>BLUEWHITERED   Blue, white, and red color map.</dt><dd><p>BLUEWHITERED(M) returns an M-by-3 matrix containing a blue to white
-to red colormap, with white corresponding to the CAXIS value closest
-to zero.  This colormap is most useful for images and surface plots
-with positive and negative values.  BLUEWHITERED, by itself, is the
-same length as the current colormap.</p>
-</dd>
-</dl>
+<dt class="sig sig-object mat" id="plots.util.unicode">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">unicode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">codepoint</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.unicode" title="Link to this definition"></a></dt>
+<dd><p>codepoint is a character array representing the part after U+ in <a class="reference internal" href="#plots.util.unicode" title="plots.util.unicode"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">unicode()</span></code></a>.
+u is a character that renders the <a class="reference internal" href="#plots.util.unicode" title="plots.util.unicode"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">unicode()</span></code></a>, for i.e. graphics.
+This function handles the required difference between the way matlab handles
+4-digit codepoints (on the “basic multilingual plane”) and 
+5- and 6-digit codepoints (on the “supplementary planes”).
+Example codepoints: ‘1f7c0’ for U+1F7C0 🟀, ‘1d54f’ for U+1D54F 𝕏, ‘2102’ for U+2102 ℂ</p>
 </dd></dl>
 
 <dl class="mat function">
@@ -145,6 +119,28 @@ same length as the current colormap.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>varargin</strong> – varargin</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat script">
+<dt class="sig sig-object mat" id="plots.util.hatchfill2_demo">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">hatchfill2_demo</span></span><a class="headerlink" href="#plots.util.hatchfill2_demo" title="Link to this definition"></a></dt>
+<dd><p>HATCHFILL2_DEMO   Demonstration script for HATCHFILL2 function
+4 examples from original HATCHFILL by Neil Tandon
+a bar plot example</p>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="plots.util.modify_suffix">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">modify_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inputCell</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.modify_suffix" title="Link to this definition"></a></dt>
+<dd><p>Function <a class="reference internal" href="#plots.util.modify_suffix" title="plots.util.modify_suffix"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">modify_suffix()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>inputCell</strong> – inputCell</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>inputCell</p>
 </dd>
 </dl>
 </dd></dl>
@@ -173,39 +169,22 @@ same length as the current colormap.</p>
 </dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="plots.util.remove_underscores">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">remove_underscores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">cell_str_in</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.remove_underscores" title="Link to this definition"></a></dt>
-<dd><p>Function <a class="reference internal" href="#plots.util.remove_underscores" title="plots.util.remove_underscores"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">remove_underscores()</span></code></a></p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">param cell_str_in<span class="colon">:</span></dt>
-<dd class="field-odd"><p>cell_str_in</p>
-</dd>
-<dt class="field-even">returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>cell_str_out</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>REMOVE_UNDERSCORES Replaces underscores with spaces and capitalizes each word</p>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="plots.util.modify_suffix">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">modify_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inputCell</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.modify_suffix" title="Link to this definition"></a></dt>
-<dd><p>Function <a class="reference internal" href="#plots.util.modify_suffix" title="plots.util.modify_suffix"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">modify_suffix()</span></code></a></p>
+<dt class="sig sig-object mat" id="plots.util.color_each_element">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">color_each_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">matrix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.color_each_element" title="Link to this definition"></a></dt>
+<dd><p>Function <a class="reference internal" href="#plots.util.color_each_element" title="plots.util.color_each_element"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">color_each_element()</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>inputCell</strong> – inputCell</p>
+<dd class="field-odd"><p><strong>matrix</strong> – matrix</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>inputCell</p>
+<dd class="field-even"><p>f</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="mat function">
 <dt class="sig sig-object mat" id="plots.util.signed_log">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">signed_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Z_data</span></em>, <em class="sig-param"><span class="pre">C</span></em>, <em class="sig-param"><span class="pre">levels</span></em>, <em class="sig-param"><span class="pre">X_data</span></em>, <em class="sig-param"><span class="pre">Y_data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.signed_log" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">signed_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Z_data</span></em>, <em class="sig-param"><span class="pre">C</span></em>, <em class="sig-param"><span class="pre">levels</span></em>, <em class="sig-param"><span class="pre">X_data</span></em>, <em class="sig-param"><span class="pre">Y_data</span></em>, <em class="sig-param"><span class="pre">contour_on</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.signed_log" title="Link to this definition"></a></dt>
 <dd><p>Function <a class="reference internal" href="#plots.util.signed_log" title="plots.util.signed_log"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">signed_log()</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -223,43 +202,29 @@ same length as the current colormap.</p>
 </dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="plots.util.save_pdf">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">save_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">fig</span></em>, <em class="sig-param"><span class="pre">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.save_pdf" title="Link to this definition"></a></dt>
-<dd><p>Function <a class="reference internal" href="#plots.util.save_pdf" title="plots.util.save_pdf"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">save_pdf()</span></code></a></p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">param fig<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Figure handle</p>
-</dd>
-<dt class="field-even">param filename<span class="colon">:</span></dt>
-<dd class="field-even"><p>filename</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>SAVE_PDF Save figure as pdf to specified filename</p>
+<dt class="sig sig-object mat" id="plots.util.table2latex">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">table2latex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tab</span></em>, <em class="sig-param"><span class="pre">filename</span></em>, <em class="sig-param"><span class="pre">special_col_spec</span></em>, <em class="sig-param"><span class="pre">special_first_row</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.table2latex" title="Link to this definition"></a></dt>
+<dd><p>Error detection and default <code class="xref mat mat-func docutils literal notranslate"><span class="pre">parameters()</span></code></p>
 </dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="plots.util.color_each_element">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">color_each_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">matrix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.color_each_element" title="Link to this definition"></a></dt>
-<dd><p>Function <a class="reference internal" href="#plots.util.color_each_element" title="plots.util.color_each_element"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">color_each_element()</span></code></a></p>
+<dt class="sig sig-object mat" id="plots.util.save_fig_with_diagnostic">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">save_fig_with_diagnostic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">fig</span></em>, <em class="sig-param"><span class="pre">fig_name</span></em>, <em class="sig-param"><span class="pre">pdf_prefix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.save_fig_with_diagnostic" title="Link to this definition"></a></dt>
+<dd><p>Function <a class="reference internal" href="#plots.util.save_fig_with_diagnostic" title="plots.util.save_fig_with_diagnostic"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">save_fig_with_diagnostic()</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>matrix</strong> – matrix</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig</strong> – Figure handle</p></li>
+<li><p><strong>fig_name</strong> – fig_name</p></li>
+<li><p><strong>pdf_prefix</strong> – pdf_prefix</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>f</p>
+<dd class="field-even"><p>diagnostic</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="plots.util.improvePlot">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">improvePlot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.improvePlot" title="Link to this definition"></a></dt>
-<dd><p>Function <a class="reference internal" href="#plots.util.improvePlot" title="plots.util.improvePlot"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">improvePlot()</span></code></a></p>
-<p>Plot <code class="xref mat mat-func docutils literal notranslate"><span class="pre">parameters()</span></code>
-MATLAB treats mac and PC displays differently which can create
-weird looking graphs. Here we handle system differences</p>
+<p>saves a pdf of a figure, robustly handling cases of gobjects, deleted
+handles, and invalid figures</p>
 </dd></dl>
 
 <dl class="mat function">
@@ -281,9 +246,103 @@ weird looking graphs. Here we handle system differences</p>
 </dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="plots.util.table2latex">
-<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">table2latex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tab</span></em>, <em class="sig-param"><span class="pre">filename</span></em>, <em class="sig-param"><span class="pre">special_col_spec</span></em>, <em class="sig-param"><span class="pre">special_first_row</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.table2latex" title="Link to this definition"></a></dt>
-<dd><p>Error detection and default <code class="xref mat mat-func docutils literal notranslate"><span class="pre">parameters()</span></code></p>
+<dt class="sig sig-object mat" id="plots.util.arrow">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">arrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">p1</span></em>, <em class="sig-param"><span class="pre">p2</span></em>, <em class="sig-param"><span class="pre">ax</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.arrow" title="Link to this definition"></a></dt>
+<dd><p><a class="reference internal" href="#plots.util.arrow" title="plots.util.arrow"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">arrow()</span></code></a> from p1 to p2: see <a class="reference external" href="https://www.mathworks.com/matlabcentral/answers/160487-how-can-i-draw-a-line-with">https://www.mathworks.com/matlabcentral/answers/160487-how-can-i-draw-a-line-with</a>-<a class="reference internal" href="#plots.util.arrow" title="plots.util.arrow"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">arrow()</span></code></a>-head-between-2-data-points-in-a-plot#answer_365407</p>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="plots.util.check_fig_size">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">check_fig_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">fig</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.check_fig_size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="plots.util.raster_text">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">raster_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">ax</span></em>, <em class="sig-param"><span class="pre">x</span></em>, <em class="sig-param"><span class="pre">y</span></em>, <em class="sig-param"><span class="pre">str</span></em>, <em class="sig-param"><span class="pre">x_span</span></em>, <em class="sig-param"><span class="pre">fontname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.raster_text" title="Link to this definition"></a></dt>
+<dd><p>creates a rasterized version of the specified text and places it on the given axes at (x,y) with the specified font. 
+x_span controls the width of the text as a fraction of the axis width. 
+This is useful for <a class="reference internal" href="#plots.util.unicode" title="plots.util.unicode"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">unicode()</span></code></a> characters that may not render correctly in vector format.
+You should set the axis limits before calling this function to ensure correct scaling.</p>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="plots.util.bluewhitered">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">bluewhitered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">m</span></em>, <em class="sig-param"><span class="pre">white_number</span></em>, <em class="sig-param"><span class="pre">lims</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.bluewhitered" title="Link to this definition"></a></dt>
+<dd><p>Function <a class="reference internal" href="#plots.util.bluewhitered" title="plots.util.bluewhitered"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">bluewhitered()</span></code></a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param m<span class="colon">:</span></dt>
+<dd class="field-odd"><p>m</p>
+</dd>
+<dt class="field-even">param white_number<span class="colon">:</span></dt>
+<dd class="field-even"><p>white_number</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>newmap</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>BLUEWHITERED   Blue, white, and red color map.</dt><dd><p>BLUEWHITERED(M) returns an M-by-3 matrix containing a blue to white
+to red colormap, with white corresponding to the CAXIS value closest
+to zero.  This colormap is most useful for images and surface plots
+with positive and negative values.  BLUEWHITERED, by itself, is the
+same length as the current colormap.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="plots.util.remove_underscores">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">remove_underscores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">cell_str_in</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.remove_underscores" title="Link to this definition"></a></dt>
+<dd><p>Function <a class="reference internal" href="#plots.util.remove_underscores" title="plots.util.remove_underscores"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">remove_underscores()</span></code></a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param cell_str_in<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cell_str_in</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell_str_out</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>REMOVE_UNDERSCORES Replaces underscores with spaces and capitalizes each word</p>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="plots.util.stacked_number_line">
+<span class="sig-prename descclassname"><span class="pre">plots.util.</span></span><span class="sig-name descname"><span class="pre">stacked_number_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data</span></em>, <em class="sig-param"><span class="pre">lower_lim</span></em>, <em class="sig-param"><span class="pre">upper_lim</span></em>, <em class="sig-param"><span class="pre">colors</span></em>, <em class="sig-param"><span class="pre">markers</span></em>, <em class="sig-param"><span class="pre">legend_cell</span></em>, <em class="sig-param"><span class="pre">ylabel_cell</span></em><span class="sig-paren">)</span><a class="headerlink" href="#plots.util.stacked_number_line" title="Link to this definition"></a></dt>
+<dd><p>STACKED_NUMBER_LINE Plot each row of a matrix as a number line.</p>
+<p>:func:<a href="#id1"><span class="problematic" id="id2">`</span></a>stacked_number_line`(data)
+:func:<a href="#id3"><span class="problematic" id="id4">`</span></a>stacked_number_line`(data, lower_lim, upper_lim)
+:func:<a href="#id5"><span class="problematic" id="id6">`</span></a>stacked_number_line`(data, lower_lim, upper_lim, colors, markers, legend_cell, ylabel_cell)</p>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>data<span class="classifier">NxM numeric matrix</span></dt><dd><p>Each row is plotted as markers at (x,y) = (data(i,:), 0).</p>
+</dd>
+<dt>lower_lim<span class="classifier">Nx1 or 1xN numeric vector (optional)</span></dt><dd><p>Lower x-axis limit for each row.</p>
+</dd>
+<dt>upper_lim<span class="classifier">Nx1 or 1xN numeric vector (optional)</span></dt><dd><p>Upper x-axis limit for each row.</p>
+</dd>
+<dt>colors<span class="classifier">1xM cell array of color specifiers (optional)</span></dt><dd><p>Color for each marker series.</p>
+</dd>
+<dt>markers<span class="classifier">1xM cell array of marker specifiers (optional)</span></dt><dd><p>Marker type for each marker series.</p>
+</dd>
+<dt>legend_cell<span class="classifier">1xM cell array of character vectors or strings (optional)</span></dt><dd><p>Legend labels for marker series.</p>
+</dd>
+<dt>ylabel_cell<span class="classifier">Nx1 or 1xN cell array of character vectors or strings (optional)</span></dt><dd><p>Y-axis labels for each row.</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Only the x-axis is shown.</p></li>
+<li><p>Markers are plotted without connecting lines.</p></li>
+<li><p>If limits are omitted, MATLAB chooses limits automatically.</p></li>
+</ul>
+</section>
 </dd></dl>
 
 </section>
