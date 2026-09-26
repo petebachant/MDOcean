@@ -5917,7 +5917,9 @@ pipeline:
       diffs:
         - aor-submitted # first submission
       # Drops changes that only swap text for its glossary entry
-      diff_filter: python3 dev/latex/latexdiff/glossary-latexdiff-filter.py
+      diff_filter:
+        kind: python-script
+        script_path: dev/latex/latexdiff/glossary-latexdiff-filter.py
     build-UMERC-paper:
       kind: latex
       target_path: 
